@@ -3,17 +3,18 @@ import java.awt.*;
 class Bullet {
     private int x, y;
     private int speed = 10;
-    private int directionX, directionY; // Direction vectors
+    private int directionX, directionY;
     private int width = 10, height = 10;
     private Color color;
-
+    
     public Bullet(int x, int y, int directionX, int directionY, Color color) {
         this.x = x;
         this.y = y;
-        this.directionX = directionX;
+        this.directionX = directionX; // No negation
         this.directionY = directionY;
         this.color = color;
     }
+    
 
     public void move() {
         x += directionX * speed;
